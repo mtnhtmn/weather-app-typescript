@@ -6,16 +6,22 @@ import axios from "axios";
 import {useHistory} from "react-router-dom";
 
 
+type TAutocompleteData = {
+    LocalizedName:string;
+    Key:string;
+}
+
+
 export default function AutocompleteCity() {
-    const [value, setValue] = React.useState(null);
+    const [value, setValue] = React.useState<TAutocompleteData|null>(null);
     const [inputValue, setInputValue] = React.useState('');
-    const [options, setOptions] = React.useState([]);
+    const [options, setOptions] = React.useState<TAutocompleteData[]>([]);
 
     const history = useHistory()
     const fetch = React.useMemo(
         () =>
-            throttle((inputValue, callback) => {
-                axios.get(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=xevDxA5DrqpWPmxG3UWazN5As6P6poAw&q=${inputValue}`).then((response) => {
+            throttle((inputValue:string, callback:(data:TAutocompleteData[])=>void) => {
+                axios.get<TAutocompleteData[]>(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=xevDxA5DrqpWPmxG3UWazN5As6P6poAw&q=${inputValue}`).then((response) => {
                     callback(response.data)
                 })
             }, 200),
@@ -32,7 +38,7 @@ export default function AutocompleteCity() {
 
         fetch(inputValue, (data) => {
             if (active) {
-                let newOptions = [];
+                let newOptions : TAutocompleteData[] = [];
 
                 if (value) {
                     newOptions = [value];
@@ -52,11 +58,11 @@ export default function AutocompleteCity() {
     }, [value, inputValue, fetch]);
 
     return (
-        <Autocomplete
+        <Autocomplete<TAutocompleteData>
             id="autocomplete-city"
             size='small'
             sx={{width: 300}}
-            getOptionLabel={(option) => typeof option === 'string' ? option : option.LocalizedName}
+            getOptionLabel={(option) =>  option && option.LocalizedName}
             options={options}
             autoComplete
             includeInputInList
@@ -64,8 +70,8 @@ export default function AutocompleteCity() {
             value={value}
             onChange={(event, newValue) => {
                 setOptions(newValue ? [newValue, ...options] : options);
-                setValue(newValue);
                 if(newValue){
+                    setValue(newValue);
                     history.push(`/home?cityName=${newValue.LocalizedName}`)
                 }
 
@@ -89,16 +95,3 @@ export default function AutocompleteCity() {
         />
     );
 }
-//
-// <Autocomplete options={[{name:'eran',label:'eran!@#'},{name:'matan',label:'matan!@#'}]}   getOptionLabel={(user) => user.label}/>
-//
-// <Autocomplete options={[{name:'eran',label:'eran!@#'},{name:'matan',label:'matan!@#'}]}   getOptionLabel={(user) => user.name}/>
-//
-// const Autocomplete = (props)=>{
-//     return (
-//         props.optios.map((user)=>{
-//             return <div>{props.getOptionLabel(user)}</div>
-//         })
-//     )
-// }
-//

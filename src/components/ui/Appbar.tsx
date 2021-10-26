@@ -1,10 +1,10 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import AutocompleteCity from "../city/AutocompleteCity";
-import {alpha, AppBar, Link, Toolbar, Typography} from "@mui/material";
+import {alpha, AppBar, Link, Theme, Toolbar, Typography} from "@mui/material";
 import {makeStyles} from "@mui/styles";
 
-const useStyles = makeStyles((theme, p) => {
+const useStyles = makeStyles((theme:Theme) => {
     return {
         root: {
             flexGrow: 1,

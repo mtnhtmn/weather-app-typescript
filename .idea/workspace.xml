@@ -4,34 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f635567a-05f6-419f-8fea-bfe25475a7de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/city/AutocompleteCity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/city/City.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/city/CityCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/city/CityCardFav.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/forecast/Forecast.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Appbar.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Theme.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/FavoritePage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router/HomePage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/cityAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/favAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/forecastAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/weatherAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/slices/citySlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/slices/favSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/slices/forecastSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/slices/weatherSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+    <list default="true" id="f635567a-05f6-419f-8fea-bfe25475a7de" name="Changes" comment="First Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/city/AutocompleteCity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/city/AutocompleteCity.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/Appbar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Appbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,8 +79,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635024849474</updated>
-      <workItem from="1635024850741" duration="20777000" />
+      <workItem from="1635024850741" duration="21466000" />
+      <workItem from="1635280197677" duration="508000" />
     </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <created>1635202516019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635202516019</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,5 +105,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
 </project>
